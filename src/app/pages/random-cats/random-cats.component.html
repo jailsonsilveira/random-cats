@@ -1,1 +1,11 @@
-<p>random-cats works!</p>
+<div class="random">
+    <div class="random-actions">
+        <button mat-button color="warn" (click)="getRandomCat()">Next Cat</button>
+        <mat-spinner class="random-loading" diameter="40" *ngIf="loading"></mat-spinner>
+    </div>
+    <div *ngIf="cat">
+        <app-cat [cat]="cat"></app-cat>
+        
+    </div>
+    
+</div>
